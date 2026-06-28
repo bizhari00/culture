@@ -20,7 +20,7 @@ st.markdown(
         max-width: 95% !important;
     }
     .custom-title {
-        font-size: 32px !important; 
+        font-size: 40px !important; 
         font-weight: 600 !important;
         color: #1E293B;
         margin-top: 40px; 

@@ -72,7 +72,7 @@ st.markdown(
 
         width: auto !important;
 
-        max-width: 320px !important; 
+        max-width: none !important; 
 
     }
 

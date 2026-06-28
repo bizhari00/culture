@@ -46,35 +46,34 @@ st.markdown(
 
     }
 
-    div.stButton > button, div.stLinkButton > a {
+ # Layout untuk tombol dan judul
+col_btn, col_title = st.columns([1.5, 3])
 
-        background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%) !important;
+with col_btn:
+    # Tombol HTML Manual agar ukuran font dan tombol bisa dipaksa membesar
+    st.markdown("""
+        <a href="https://forio.com/app/bustamiizhari/culture" target="_blank" 
+           style="
+            display: inline-block;
+            background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
+            color: #FFFFFF;
+            padding: 20px 40px;
+            font-size: 35px;
+            font-weight: bold;
+            border-radius: 12px;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.5);
+            text-align: center;
+            border: none;
+        ">
+        🏠 Simulation Open Here
+        </a>
+    """, unsafe_allow_html=True)
 
-        color: #FFFFFF !important;
+with col_title:
+    st.markdown('<p class="custom-title">Lack of Safety Culture leads to high cost</p>', unsafe_allow_html=True)
 
-        border: none !important;
-
-        border-radius: 8px !important; 
-
-        padding: 30px 50px !important; 
-
-        font-size: 80px !important;      /* MEMPERBESAR FONT (Ubah angka ini sesuai kebutuhan) */
-
-        font-weight: 700 !important;     /* Menebalkan font */
-
-        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25) !important;
-
-        transition: all 0.3s ease-in-out !important;
-
-        text-decoration: none !important;
-
-        display: inline-flex !important;
-
-        width: auto !important;
-
-        max-width: 320px !important; 
-
-    }
+st.divider()
 
     .custom-title {
 

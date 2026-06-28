@@ -35,10 +35,10 @@ st.markdown(
         box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3) !important;
     }
     .custom-title {
-        font-size: 32px !important; 
+        font-size: 38px !important; 
         font-weight: 600 !important;
         color: #1E293B;
-        margin-top: 15px; 
+        margin-top: 25px; 
     }
     </style>
     """,

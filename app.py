@@ -16,39 +16,37 @@ st.markdown(
     """
     <style>
     .block-container {
-        padding-top: 2.0rem !important; 
-        padding-bottom: 1.5rem !important;
-        padding-left: 2.0rem !important;
-        padding-right: 2.0rem !important;
-        max-width: 100% !important;
+        padding-top: 1.0rem !important; 
+        max-width: 95% !important;
     }
-    div.stButton > button, div.stLinkButton > a {
+    /* Style untuk tombol */
+    div.stLinkButton > a {
         background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%) !important;
         color: #FFFFFF !important;
         border: none !important;
-        border-radius: 8px !important; 
-        padding: 30px 50px !important; 
-        font-size: 80px !important;      /* MEMPERBESAR FONT (Ubah angka ini sesuai kebutuhan) */
-        font-weight: 700 !important;     /* Menebalkan font */
-        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25) !important;
-        transition: all 0.3s ease-in-out !important;
+        border-radius: 12px !important; 
+        padding: 20px 40px !important; /* Menambah ruang dalam tombol */
+        font-size: 24px !important;    /* Ukuran font yang proporsional */
+        font-weight: 700 !important;   
+        width: fit-content !important; /* Membiarkan tombol menyesuaikan teks */
+        max-width: none !important;    /* Menghapus batasan 320px */
         text-decoration: none !important;
         display: inline-flex !important;
-        width: auto !important;
-        max-width: 320px !important; 
+        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3) !important;
     }
     .custom-title {
-        font-size: 30px !important; 
-        font-weight: 500 !important;
+        font-size: 32px !important; 
+        font-weight: 600 !important;
         color: #1E293B;
-        margin-top: 14px; 
+        margin-top: 15px; 
     }
     </style>
     """,
     unsafe_allow_html=True
 )
 
-col_btn, col_title = st.columns([1.2, 2.8])
+# Layout untuk tombol dan judul
+col_btn, col_title = st.columns([1, 3])
 with col_btn:
     st.link_button("🏠 Simulation Open Here", "https://forio.com/app/bustamiizhari/culture")
 with col_title:
@@ -68,6 +66,7 @@ except FileNotFoundError:
 # ==============================================================================
 # 5. DATA KOORDINAT XY
 # ==============================================================================
+# (Data tetap sama)
 process_phases = [
     [{'label': '', 'shape_type': 'rect', 'is_bottom': False, 'tank_area': [304,36, 506, 108]},
      {'label': '', 'shape_type': 'rect', 'is_bottom': False, 'tank_area': [874, 41,1082 ,114 ]}],
@@ -78,36 +77,29 @@ process_phases = [
      {'label': '', 'shape_type': 'rect', 'is_bottom': False, 'tank_area': [1018, 490, 1209, 569]}],
     [{'label': '', 'shape_type': 'rect', 'is_bottom': False, 'tank_area': [582, 224, 796, 341]},
      {'label': '', 'shape_type': 'rect', 'is_bottom': False, 'tank_area': [854, 224, 1037, 341]}],
-
 ]
 
 # ==============================================================================
-# 6. RENDERING LOGIC (AKUMULATIF)
+# 6. RENDERING LOGIC
 # ==============================================================================
 placeholder = st.empty()
 render_count = 0
 
 while True:
     active_components = []
-    
     for phase in process_phases:
         active_components.extend(phase)
-        
         fig = px.imshow(img)
         fig.update_xaxes(visible=False, showgrid=False)
         fig.update_yaxes(visible=False, showgrid=False)
         
-        # Gambar semua komponen aktif yang terakumulasi
         for component in active_components:
             area = component['tank_area']
-            fig.add_shape(
-                type=component.get('shape_type', 'rect'), 
-                x0=area[0], y0=area[1], x1=area[2], y1=area[3],
-                fillcolor="rgba(212, 175, 55, 0.35)",
-                line=dict(width=0)
-            )
+            fig.add_shape(type="rect", x0=area[0], y0=area[1], x1=area[2], y1=area[3],
+                          fillcolor="rgba(212, 175, 55, 0.35)", line=dict(width=0))
         
-        fig.update_layout(margin=dict(l=0, r=0, t=15, b=0), height=700, showlegend=False)
+        # MEMPERBESAR KOTAK SIMULASI dengan meningkatkan height
+        fig.update_layout(margin=dict(l=0, r=0, t=0, b=0), height=850, showlegend=False)
         
         with placeholder.container():
             st.plotly_chart(fig, use_container_width=True, key=f"key_{render_count}")

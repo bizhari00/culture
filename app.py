@@ -115,6 +115,7 @@ process_phases = [
         {'label': '', 'shape_type': 'rect', 'is_bottom': False, 'tank_area': [872, 18, 996, 83]},
         # Kotak Bawah
   ]
+      ]
     
     # --- FASE 2: LAJU ALIRAN/FLOWS (ATAS) + KOTAK BAWAH ---
     [
@@ -123,14 +124,14 @@ process_phases = [
         {'label': '', 'shape_type': 'rect', 'is_bottom': False, 'tank_area': [779, 88, 925, 165]},
         # Kotak Bawah
    ]
-    
+      ]
     # --- FASE 3: AKUMULASI STOK/STOCKS (ATAS) + KOTAK BAWAH ---
     [
         # Koordinat Asli Atas (Bentuk Kotak)
         {'label': '', 'shape_type': 'rect', 'is_bottom': False, 'tank_area': [465, 75, 606, 163]},
         {'label': '', 'shape_type': 'rect', 'is_bottom': False, 'tank_area': [621, 75, 751, 163]},
         # Kotak Bawah
-
+  ]
 ]
 
 # ==============================================================================

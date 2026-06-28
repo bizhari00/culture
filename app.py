@@ -73,7 +73,7 @@ process_phases = [
      {'label': '', 'shape_type': 'rect', 'is_bottom': False, 'tank_area': [1275,131,1435,205]},
      {'label': '', 'shape_type': 'rect', 'is_bottom': False, 'tank_area': [539,458, 720, 538]},
      {'label': '', 'shape_type': 'rect', 'is_bottom': False, 'tank_area': [1462, 422, 1659, 462]},
-     {'label': '', 'shape_type': 'rect', 'is_bottom': False, 'tank_area': [872, 18, 996, 83]}],
+     {'label': '', 'shape_type': 'rect', 'is_bottom': False, 'tank_area': [1018, 490, 1209, 463]}],
     [{'label': '', 'shape_type': 'rect', 'is_bottom': False, 'tank_area': [271, 93, 428, 169]},
      {'label': '', 'shape_type': 'rect', 'is_bottom': False, 'tank_area': [779, 88, 925, 165]}],
     [{'label': '', 'shape_type': 'rect', 'is_bottom': False, 'tank_area': [465, 75, 606, 163]},

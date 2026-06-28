@@ -56,9 +56,9 @@ st.markdown(
 
         border-radius: 8px !important; 
 
-        padding: 30px 50px !important; 
+        padding: 25px 35px !important; 
 
-        font-size: 80px !important;      /* MEMPERBESAR FONT (Ubah angka ini sesuai kebutuhan) */
+        font-size: 40px !important;      /* MEMPERBESAR FONT (Ubah angka ini sesuai kebutuhan) */
 
         font-weight: 700 !important;     /* Menebalkan font */
 

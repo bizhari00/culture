@@ -89,7 +89,7 @@ with col_btn:
     st.link_button("🏠 Simulation Open Here", "https://forio.com/app/bustamiizhari/culture", use_container_width=False)
 
 with col_title:
-    st.markdown('<p class="custom-title">Lack of control leads to high costs</p>', unsafe_allow_html=True)
+    st.markdown('<p class="custom-title">Lack of Safety Culture leads to high cost</p>', unsafe_allow_html=True)
 
 st.divider()
 

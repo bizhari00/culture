@@ -114,8 +114,7 @@ process_phases = [
         {'label': '', 'shape_type': 'rect', 'is_bottom': False, 'tank_area': [720, 232, 851, 293]},
         {'label': '', 'shape_type': 'rect', 'is_bottom': False, 'tank_area': [872, 18, 996, 83]},
         # Kotak Bawah
-        {'label': '', 'shape_type': 'rect', 'is_bottom': True, 'tank_area': [130, 429, 468, 688]} 
-    ],
+  ]
     
     # --- FASE 2: LAJU ALIRAN/FLOWS (ATAS) + KOTAK BAWAH ---
     [
@@ -123,8 +122,7 @@ process_phases = [
         {'label': '', 'shape_type': 'rect', 'is_bottom': False, 'tank_area': [271, 93, 428, 169]},
         {'label': '', 'shape_type': 'rect', 'is_bottom': False, 'tank_area': [779, 88, 925, 165]},
         # Kotak Bawah
-        {'label': '', 'shape_type': 'rect', 'is_bottom': True, 'tank_area': [479, 435, 802, 683]} 
-    ],
+   ]
     
     # --- FASE 3: AKUMULASI STOK/STOCKS (ATAS) + KOTAK BAWAH ---
     [
@@ -132,8 +130,7 @@ process_phases = [
         {'label': '', 'shape_type': 'rect', 'is_bottom': False, 'tank_area': [465, 75, 606, 163]},
         {'label': '', 'shape_type': 'rect', 'is_bottom': False, 'tank_area': [621, 75, 751, 163]},
         # Kotak Bawah
-        {'label': '', 'shape_type': 'rect', 'is_bottom': True, 'tank_area': [816, 429, 1181, 690]} 
-    ]
+
 ]
 
 # ==============================================================================

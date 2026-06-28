@@ -20,7 +20,7 @@ st.markdown(
         max-width: 100% !important;
     }
     .custom-title {
-        font-size: 30px !important; 
+        font-size: 35px !important; 
         font-weight: 500 !important;
         color: #1E293B;
         margin-top: 14px; 
@@ -42,7 +42,7 @@ with col_btn:
             background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
             color: #FFFFFF;
             padding: 20px 30px;
-            font-size: 30px;
+            font-size: 20px;
             font-weight: bold;
             border-radius: 12px;
             text-decoration: none;

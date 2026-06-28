@@ -105,7 +105,7 @@ while True:
                 line=dict(width=0)
             )
         
-        fig.update_layout(margin=dict(l=0, r=0, t=15, b=0), height=900, showlegend=False)
+        fig.update_layout(margin=dict(l=0, r=0, t=15, b=0), height=700, showlegend=False)
         
         with placeholder.container():
             st.plotly_chart(fig, use_container_width=True, key=f"key_{render_count}")

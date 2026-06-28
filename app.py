@@ -25,8 +25,8 @@ st.markdown(
         color: #FFFFFF !important;
         border: none !important;
         border-radius: 12px !important; 
-        padding: 20px 40px !important; /* Menambah ruang dalam tombol */
-        font-size: 24px !important;    /* Ukuran font yang proporsional */
+        padding: 30px 50px !important; /* Menambah ruang dalam tombol */
+        font-size: 35px !important;    /* Ukuran font yang proporsional */
         font-weight: 700 !important;   
         width: fit-content !important; /* Membiarkan tombol menyesuaikan teks */
         max-width: none !important;    /* Menghapus batasan 320px */
@@ -38,7 +38,7 @@ st.markdown(
         font-size: 38px !important; 
         font-weight: 600 !important;
         color: #1E293B;
-        margin-top: 25px; 
+        margin-top: 45px; 
     }
     </style>
     """,

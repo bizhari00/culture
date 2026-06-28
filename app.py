@@ -23,7 +23,7 @@ st.markdown(
         font-size: 40px !important; 
         font-weight: 600 !important;
         color: #1E293B;
-        margin-top: 40px; 
+        margin-top: 50px; 
     }
     </style>
     """,

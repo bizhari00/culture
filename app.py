@@ -12,7 +12,7 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-# Pengaturan padding halaman utama agar aman di Forio 80%
+# Pengaturan padding halaman utama agar aman
 st.markdown(
     """
     <style>
@@ -34,12 +34,11 @@ st.markdown(
 st.markdown("<br><br>", unsafe_allow_html=True)
 
 # ==============================================================================
-# 3. NAVIGASI & JUDUL SEBARIS (Balanced Design Button & Title)
+# 3. NAVIGASI & JUDUL SEBARIS
 # ==============================================================================
 st.markdown(
     """
     <style>
-    /* 1. Mengatur Ukuran Kotak Tombol Agar Seimbang */
     .stLinkButton > a {
         background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%) !important;
         color: #FFFFFF !important;
@@ -49,28 +48,16 @@ st.markdown(
         box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25) !important;
         transition: all 0.3s ease-in-out !important;
         text-decoration: none !important;
-        
         display: inline-flex !important;
         width: auto !important;
         max-width: 320px !important; 
     }
-
-    /* 2. Menyesuaikan Ukuran Font Tombol */
     .stLinkButton > a p {
         font-size: 16px !important; 
         font-weight: bold !important;
         color: #FFFFFF !important;
         letter-spacing: 0.5px !important;
     }
-
-    /* 3. Efek Hover */
-    .stLinkButton > a:hover {
-        background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%) !important;
-        box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4) !important;
-        transform: translateY(-1px) !important;
-    }
-
-    /* 4. Mengatur Teks Judul Diagram Agar Selaras */
     .custom-title {
         font-size: 20px !important; 
         font-weight: 500 !important;
@@ -94,44 +81,35 @@ with col_title:
 st.divider()
 
 # ==============================================================================
-# 4. MEMUAT BACKGROUND IMAGE PKS
+# 4. MEMUAT BACKGROUND IMAGE
 # ==============================================================================
 try:
     img = Image.open("culture.png") 
 except FileNotFoundError:
-    st.error("File 'qcd.png' tidak ditemukan. Pastikan file gambar diagram Anda ada di root repository GitHub Anda dan namanya sesuai.")
+    st.error("File 'culture.png' tidak ditemukan. Pastikan file gambar ada di direktori yang benar.")
     st.stop()
 
 # ==============================================================================
-# 5. DATA KOORDINAT XY (Atas Kotak, Bawah Lingkaran/Circle/Kotak Lembut)
+# 5. DATA KOORDINAT XY (DIPERBAIKI)
 # ==============================================================================
 process_phases = [
-    # --- FASE 1: PARAMETER INPUT (ATAS) + KOTAK BAWAH ---
+    # --- FASE 1 ---
     [
-        # Koordinat Asli Atas (Bentuk Kotak)
         {'label': '', 'shape_type': 'rect', 'is_bottom': False, 'tank_area': [152, 40, 268, 94]},
         {'label': '', 'shape_type': 'rect', 'is_bottom': False, 'tank_area': [74, 155, 203, 231]},
         {'label': '', 'shape_type': 'rect', 'is_bottom': False, 'tank_area': [720, 232, 851, 293]},
-        {'label': '', 'shape_type': 'rect', 'is_bottom': False, 'tank_area': [872, 18, 996, 83]},
-        # Kotak Bawah
-  ]
-      ]
-    
-    # --- FASE 2: LAJU ALIRAN/FLOWS (ATAS) + KOTAK BAWAH ---
+        {'label': '', 'shape_type': 'rect', 'is_bottom': False, 'tank_area': [872, 18, 996, 83]}
+    ],
+    # --- FASE 2 ---
     [
-        # Koordinat Asli Atas (Bentuk Kotak)
         {'label': '', 'shape_type': 'rect', 'is_bottom': False, 'tank_area': [271, 93, 428, 169]},
-        {'label': '', 'shape_type': 'rect', 'is_bottom': False, 'tank_area': [779, 88, 925, 165]},
-        # Kotak Bawah
-   ]
-      ]
-    # --- FASE 3: AKUMULASI STOK/STOCKS (ATAS) + KOTAK BAWAH ---
+        {'label': '', 'shape_type': 'rect', 'is_bottom': False, 'tank_area': [779, 88, 925, 165]}
+    ],
+    # --- FASE 3 ---
     [
-        # Koordinat Asli Atas (Bentuk Kotak)
         {'label': '', 'shape_type': 'rect', 'is_bottom': False, 'tank_area': [465, 75, 606, 163]},
-        {'label': '', 'shape_type': 'rect', 'is_bottom': False, 'tank_area': [621, 75, 751, 163]},
-        # Kotak Bawah
-  ]
+        {'label': '', 'shape_type': 'rect', 'is_bottom': False, 'tank_area': [621, 75, 751, 163]}
+    ]
 ]
 
 # ==============================================================================
@@ -144,25 +122,16 @@ while True:
     for phase in process_phases:
         fig = px.imshow(img)
         
-        # Sembunyikan Grid Aksis total agar diagram estetik dan bersih
         fig.update_xaxes(visible=False, showgrid=False)
         fig.update_yaxes(visible=False, showgrid=False)
         
-        # Gambar ulang kotak animasi di tiap fase
         for component in phase:
             area = component['tank_area']
             shape = component.get('shape_type', 'rect')
             is_bottom = component.get('is_bottom', False)
             
-            # PENGATURAN WARNA EMAS TANPA BORDER DI SINI:
-            if is_bottom:
-                # Kotak bawah: tanpa garis tepi & warna emas pastel lembut (alpha 0.15 agar lebih transparan)
-                fill_color = "rgba(212, 175, 55, 0.15)" 
-            else:
-                # Kotak atas: tanpa garis tepi & warna emas pastel standar (alpha 0.35)
-                fill_color = "rgba(212, 175, 55, 0.35)"
+            fill_color = "rgba(212, 175, 55, 0.15)" if is_bottom else "rgba(212, 175, 55, 0.35)"
             
-            # Menggambar Bentuk Sorotan Dinamis (Semua width diubah menjadi 0)
             fig.add_shape(
                 type=shape, 
                 x0=area[0], y0=area[1], x1=area[2], y1=area[3],
@@ -170,11 +139,9 @@ while True:
                 line=dict(width=0), 
             )
             
-            # Koordinat Label Dinamis
             text_x = (area[0] + area[2]) / 2
             text_y = area[3] + 20
             
-            # Tempel Label Teks
             fig.add_scatter(
                 x=[text_x], y=[text_y], 
                 mode="text",
@@ -194,10 +161,7 @@ while True:
             st.plotly_chart(
                 fig, 
                 use_container_width=True, 
-                config={
-                    'displayModeBar': False, 
-                    'responsive': True
-                }, 
+                config={'displayModeBar': False, 'responsive': True}, 
                 key=f"pks_live_mode_{render_count}"
             )
         

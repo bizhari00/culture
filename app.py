@@ -7,7 +7,7 @@ import time
 # 1. KONFIGURASI HALAMAN UTAMA (Wajib Paling Atas)
 # ==============================================================================
 st.set_page_config(
-    page_title="Trisen Syntegra - Mode Live",
+    page_title="Safety Culture - Mode Live",
     layout="wide",
     initial_sidebar_state="collapsed"
 )
@@ -86,7 +86,7 @@ st.markdown(
 col_btn, col_title = st.columns([1.2, 2.8])
 
 with col_btn:
-    st.link_button("🏠 Tri-Sen Technology Open Here", "https://forio.com/app/trisen_syntegra/trisen2", use_container_width=False)
+    st.link_button("🏠 Simulation Open Here", "https://forio.com/app/bustamiizhari/culture", use_container_width=False)
 
 with col_title:
     st.markdown('<p class="custom-title">Lack of control leads to high costs</p>', unsafe_allow_html=True)
@@ -97,7 +97,7 @@ st.divider()
 # 4. MEMUAT BACKGROUND IMAGE PKS
 # ==============================================================================
 try:
-    img = Image.open("qcd.png") 
+    img = Image.open("culture.png") 
 except FileNotFoundError:
     st.error("File 'qcd.png' tidak ditemukan. Pastikan file gambar diagram Anda ada di root repository GitHub Anda dan namanya sesuai.")
     st.stop()

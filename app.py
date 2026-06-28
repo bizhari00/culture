@@ -42,7 +42,7 @@ st.markdown(
 
         padding-right: 2.0rem !important;
 
-        max-width: 100% !important;
+        max-width: none !important;
 
     }
 

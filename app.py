@@ -28,6 +28,7 @@ st.markdown(
         border: none !important;
         border-radius: 8px !important; 
         padding: 30px 50px !important; 
+        font-size: 30px !important;
         box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25) !important;
         transition: all 0.3s ease-in-out !important;
         text-decoration: none !important;

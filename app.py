@@ -22,13 +22,13 @@ st.markdown(
         padding-right: 2.0rem !important;
         max-width: 100% !important;
     }
-    div.stButton > button,div.stLinkButton > a {
+    div.stButton > button, div.stLinkButton > a {
         background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%) !important;
         color: #FFFFFF !important;
         border: none !important;
         border-radius: 8px !important; 
         padding: 30px 50px !important; 
-        font-size: 50px !important;      /* MEMPERBESAR FONT (Ubah angka ini sesuai kebutuhan) */
+        font-size: 80px !important;      /* MEMPERBESAR FONT (Ubah angka ini sesuai kebutuhan) */
         font-weight: 700 !important;     /* Menebalkan font */
         box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25) !important;
         transition: all 0.3s ease-in-out !important;

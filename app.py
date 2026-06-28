@@ -36,10 +36,10 @@ st.markdown(
         max-width: 320px !important; 
     }
     .custom-title {
-        font-size: 25px !important; 
+        font-size: 30px !important; 
         font-weight: 500 !important;
         color: #1E293B;
-        margin-top: 10px; 
+        margin-top: 14px; 
     }
     </style>
     """,

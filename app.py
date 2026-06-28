@@ -36,7 +36,7 @@ col_btn, col_title = st.columns([1.5, 3])
 with col_btn:
     # Tombol HTML Manual agar ukuran bisa dikontrol 100%
     st.markdown("""
-        <a href="https://forio.com/app/bustamiizhari/culture" target="_blank" 
+        <a href="https://forio.com/app/bustamiizhari/culture1" target="_blank" 
            style="
             display: inline-block;
             background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);

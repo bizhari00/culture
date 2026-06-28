@@ -67,8 +67,8 @@ except FileNotFoundError:
 # 5. DATA KOORDINAT XY
 # ==============================================================================
 process_phases = [
-    [{'label': '', 'shape_type': 'rect', 'is_bottom': False, 'tank_area': [271, 93, 428, 169]},
-     {'label': '', 'shape_type': 'rect', 'is_bottom': False, 'tank_area': [779, 88, 925, 165]}],
+    [{'label': '', 'shape_type': 'rect', 'is_bottom': False, 'tank_area': [304,36, 506, 108]},
+     {'label': '', 'shape_type': 'rect', 'is_bottom': False, 'tank_area': [874, 41,1082 ,114 ]}],
     [{'label': '', 'shape_type': 'rect', 'is_bottom': False, 'tank_area': [152, 40, 268, 94]},
      {'label': '', 'shape_type': 'rect', 'is_bottom': False, 'tank_area': [74, 155, 203, 231]},
      {'label': '', 'shape_type': 'rect', 'is_bottom': False, 'tank_area': [50, 155, 190, 231]},

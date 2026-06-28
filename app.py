@@ -23,7 +23,7 @@ st.markdown(
         font-size: 32px !important; 
         font-weight: 600 !important;
         color: #1E293B;
-        margin-top: 20px; 
+        margin-top: 40px; 
     }
     </style>
     """,
@@ -41,8 +41,8 @@ with col_btn:
             display: inline-block;
             background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
             color: #FFFFFF;
-            padding: 20px 40px;
-            font-size: 35px;
+            padding: 20px 30px;
+            font-size: 25px;
             font-weight: bold;
             border-radius: 12px;
             text-decoration: none;

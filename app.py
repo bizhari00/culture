@@ -22,7 +22,7 @@ st.markdown(
         padding-right: 2.0rem !important;
         max-width: 100% !important;
     }
-    .stLinkButton > a {
+    div.stButton > button,div.stLinkButton > a {
         background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%) !important;
         color: #FFFFFF !important;
         border: none !important;
